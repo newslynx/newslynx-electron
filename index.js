@@ -12,9 +12,9 @@ require('electron-debug')();
 
 function createMainWindow () {
 	const win = new BrowserWindow({
-		width: 600,
-		height: 400,
-		resizable: false
+		width: 1024,
+		height: 768,
+		resizable: true
 	});
 
 	win.loadUrl(`http://localhost:3000`);
@@ -40,11 +40,13 @@ app.on('window-all-closed', function () {
 
 app.on('activate-with-no-open-windows', function () {
 	if (!mainWindow) {
-		newslynx.run();
+		console.log('from here')
 		mainWindow = createMainWindow();
 	}
 });
 
 app.on('ready', function () {
+	console.log('from there')
+	newslynx.run();
 	mainWindow = createMainWindow();
 });
