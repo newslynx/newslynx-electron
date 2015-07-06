@@ -8,16 +8,16 @@ const BrowserWindow = require('browser-window');
 require('crash-reporter').start();
 
 // adds debug features like hotkeys for triggering dev tools and reload
-require('electron-debug')();
+// require('electron-debug')();
 
 function createMainWindow () {
 	const win = new BrowserWindow({
-		width: 1024,
+		width: 1235,
 		height: 768,
 		resizable: true
 	});
 
-	win.loadUrl(`http://localhost:3000`);
+	win.loadUrl('http://localhost:3000');
 	win.on('closed', onClosed);
 
 	return win;
