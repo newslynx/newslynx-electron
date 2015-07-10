@@ -14,8 +14,8 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "start": "electron .",
-    "build": "electron-packager . NewsLynx --prune --overwrite --platform=darwin --arch=x64 --version=0.28.1 --icon='assets/merlynne-ears.icns' --ignore='node_modules/(electron-packager|electron-prebuilt)'"
+    "start": "NEWSLYNX_ENV=electron electron .",
+    "build": "NEWSLYNX_ENV=electron electron-packager . NewsLynx --prune --overwrite --platform=darwin --arch=x64 --version=0.28.1 --icon='assets/merlynne-ears.icns' --ignore='node_modules/(electron-packager|electron-prebuilt)'"
   },
   "files": [
     "index.js",
