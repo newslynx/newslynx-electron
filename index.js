@@ -40,13 +40,11 @@ app.on('window-all-closed', function () {
 
 app.on('activate-with-no-open-windows', function () {
 	if (!mainWindow) {
-		console.log('from here')
 		mainWindow = createMainWindow();
 	}
 });
 
 app.on('ready', function () {
-	console.log('from there')
 	newslynx.run();
 	mainWindow = createMainWindow();
 });
