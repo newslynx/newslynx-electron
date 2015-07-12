@@ -12,7 +12,7 @@ require('crash-reporter').start();
 
 function createMainWindow () {
 	const win = new BrowserWindow({
-		width: 1235,
+		width: 1350,
 		height: 768,
 		resizable: true
 	});
