@@ -1,21 +1,29 @@
 # Newslynx Electron
 
-A desktop version of [NewsLynx app](http://github.com/newslynx/newslynx-app) running on [Electron](https://github.com/atom/electron). Scaffolded with [generator-electron](https://github.com/sindresorhus/generator-electron). Still a work in progress. To be released August 2015. Check the [project issue tracker(http://github.com/newslynx/opportunities)for updates.
+A desktop version of [NewsLynx app](http://github.com/newslynx/newslynx-app) running on [Electron](https://github.com/atom/electron). Scaffolded with [generator-electron](https://github.com/sindresorhus/generator-electron). Still a work in progress. To be released July 2015.
 
 
-## Dev
+## Installation and config
+
+Install dependencies with the following:
 
 ```
 $ npm install
 ```
 
-### Run
+Rename [config.sample.yaml](config.sample.yaml) to `config.yaml` and change values to where your [NewsLynx API](http://github.com/newslynx/newslynx-core) lives and pick a new secret key string.
+
+### Development
+
+Use this command to start up a version locally.
 
 ```
 $ npm start
 ```
 
-### Build
+### Build app
+
+Package into a desktop application with the following: 
 
 ```
 $ npm run build
