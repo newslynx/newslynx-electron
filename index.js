@@ -1,5 +1,6 @@
 'use strict';
 var newslynx = require('newslynx');
+var updater = require('electron-updater');
 
 const app = require('app');
 const BrowserWindow = require('browser-window');
@@ -19,6 +20,16 @@ function createMainWindow () {
 
 	win.loadUrl('http://localhost:3000');
 	win.on('closed', onClosed);
+
+  // updater.on('updateRequired', function () {       
+  // 	console.log('update required') 
+  //   win.webContents.send('update-available');
+  //   // app.quit();
+  // })
+  // updater.on('updateAvailable', function () {
+  // 	console.log('update available')
+  // })
+  // updater.start()
 
 	return win;
 }

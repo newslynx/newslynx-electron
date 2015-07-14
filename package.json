@@ -1,7 +1,7 @@
 {
   "name": "newslynx-electron",
   "productName": "Newslynx",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "A desktop version of the NewsLynx web app.",
   "main": "index.js",
   "repository": "newslynx/newslynx-electron",
@@ -14,9 +14,9 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "start":       "NEWSLYNX_ENV=electron       electron .",
+    "start": "NEWSLYNX_ENV=electron electron .",
     "start-https": "NEWSLYNX_ENV=electron-https electron .",
-    "build":       "NEWSLYNX_ENV=electron electron-packager       . NewsLynx --prune --overwrite --platform=darwin --arch=x64 --version=0.28.1 --icon='assets/merlynne-ears.icns' --ignore='node_modules/(electron-packager|electron-prebuilt)'",
+    "build": "NEWSLYNX_ENV=electron electron-packager . NewsLynx --prune --overwrite --platform=darwin --arch=x64 --version=0.28.1 --icon='assets/merlynne-ears.icns' --ignore='node_modules/(electron-packager|electron-prebuilt)'",
     "build-https": "NEWSLYNX_ENV=electron-https electron-packager . NewsLynx --prune --overwrite --platform=darwin --arch=x64 --version=0.28.1 --icon='assets/merlynne-ears.icns' --ignore='node_modules/(electron-packager|electron-prebuilt)'"
   },
   "files": [
@@ -25,14 +25,20 @@
     "index.css"
   ],
   "keywords": [
+    "newslynx",
+    "journalism",
+    "impact",
+    "quantitative",
+    "qualitative",
     "electron-app"
   ],
   "dependencies": {
     "electron-debug": "^0.1.0",
+    "electron-updater": "0.0.7",
     "isotope-layout": "^2.2.1",
     "jquery": "^1.11.0",
     "moment": "^2.8.3",
-    "newslynx": "^0.1.0"
+    "newslynx": "^0.0.1"
   },
   "devDependencies": {
     "electron-packager": "5.0.0",
