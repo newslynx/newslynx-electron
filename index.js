@@ -1,7 +1,7 @@
 'use strict';
+
 var newslynx = require('newslynx'),
     port = 3690;
-// var updater = require('electron-updater');
 
 const app = require('app');
 const BrowserWindow = require('browser-window');
@@ -22,18 +22,34 @@ function createMainWindow () {
 	win.loadUrl('http://localhost:'+port);
 	win.on('closed', onClosed);
 	win.openDevTools({detach:false}) 
-  // updater.on('updateRequired', function () {       
-  // 	console.log('update required') 
-  //   win.webContents.send('update-available');
-  //   app.quit();
-  // })
-  // updater.on('updateAvailable', function () {
-  // 	console.log('update available')
-  // })
-  // updater.start()
+
 
 	return win;
 }
+
+var gh_releases = require('electron-gh-releases')
+
+var options = {
+  repo: 'newslynx/newslynx-electron',
+  currentVersion: app.getVersion()
+}
+
+var update = new gh_releases(options, function (auto_updater) {
+  // Auto updater event listener
+  auto_updater.on('update-downloaded', function (e, rNotes, rName, rDate, uUrl, quitAndUpdate) {
+    // Install the update
+    quitAndUpdate()
+  })
+})
+
+// Check for updates
+update.check(function (err, status) {
+  if (!err && status) {
+    update.download()
+  } else {
+    console.log('ERROR updating', err)
+  }
+})
 
 function onClosed() {
 	// deref the window
@@ -59,6 +75,5 @@ app.on('activate-with-no-open-windows', function () {
 app.on('ready', function () {
 	newslynx.run(port, function(){
   	mainWindow = createMainWindow();
-    
   });
 });

@@ -1,7 +1,7 @@
 {
   "name": "newslynx-electron",
   "productName": "Newslynx",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "A desktop version of the NewsLynx web app.",
   "main": "index.js",
   "repository": "newslynx/newslynx-electron",
@@ -34,11 +34,12 @@
   ],
   "dependencies": {
     "electron-debug": "^0.1.0",
-    "electron-updater": "0.0.14",
+    "electron-gh-releases": "^1.0.1",
     "isotope-layout": "^2.2.1",
     "jquery": "^1.11.0",
     "moment": "^2.8.3",
-    "newslynx": "^0.0.1"
+    "newslynx": "^0.0.1",
+    "remote": "^0.2.6"
   },
   "devDependencies": {
     "electron-packager": "5.0.1",
