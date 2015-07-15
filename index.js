@@ -32,22 +32,23 @@ var options = {
   currentVersion: app.getVersion()
 }
 
-var update = new gh_releases(options, function (auto_updater) {
-  // Auto updater event listener
-  auto_updater.on('update-downloaded', function (e, rNotes, rName, rDate, uUrl, quitAndUpdate) {
-    // Install the update
-    quitAndUpdate()
-  })
-})
+// var update = new gh_releases(options, function (auto_updater) {
+//   // Auto updater event listener
+//   auto_updater.on('update-downloaded', function (e, rNotes, rName, rDate, uUrl, quitAndUpdate) {
+//     // Install the update
+//     quitAndUpdate()
+//   })
+// })
 
 // Check for updates
-update.check(function (err, status) {
-  if (!err && status) {
-    update.download()
-  } else {
-    console.log('ERROR updating', err)
-  }
-})
+// Disable until we figure out code signing
+// update.check(function (err, status) {
+//   if (!err && status) {
+      // update.download()
+//   } else {
+//     console.log('ERROR updating', err)
+//   }
+// })
 
 function onClosed() {
 	// deref the window
