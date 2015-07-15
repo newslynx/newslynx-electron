@@ -38,8 +38,7 @@
     "isotope-layout": "^2.2.1",
     "jquery": "^1.11.0",
     "moment": "^2.8.3",
-    "newslynx": "^0.0.1",
-    "remote": "^0.2.6"
+    "newslynx": "^0.0.1"
   },
   "devDependencies": {
     "electron-packager": "5.0.1",

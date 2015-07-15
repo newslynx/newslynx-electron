@@ -21,8 +21,6 @@ function createMainWindow () {
 
 	win.loadUrl('http://localhost:'+port);
 	win.on('closed', onClosed);
-	win.openDevTools({detach:false}) 
-
 
 	return win;
 }
