@@ -1,6 +1,7 @@
 'use strict';
-var newslynx = require('newslynx');
-var updater = require('electron-updater');
+var newslynx = require('newslynx'),
+    port = 3690;
+// var updater = require('electron-updater');
 
 const app = require('app');
 const BrowserWindow = require('browser-window');
@@ -18,13 +19,13 @@ function createMainWindow () {
 		resizable: true
 	});
 
-	win.loadUrl('http://localhost:3000');
+	win.loadUrl('http://localhost:'+port);
 	win.on('closed', onClosed);
-
+	win.openDevTools({detach:false}) 
   // updater.on('updateRequired', function () {       
   // 	console.log('update required') 
   //   win.webContents.send('update-available');
-  //   // app.quit();
+  //   app.quit();
   // })
   // updater.on('updateAvailable', function () {
   // 	console.log('update available')
@@ -56,6 +57,8 @@ app.on('activate-with-no-open-windows', function () {
 });
 
 app.on('ready', function () {
-	newslynx.run();
-	mainWindow = createMainWindow();
+	newslynx.run(port, function(){
+  	mainWindow = createMainWindow();
+    
+  });
 });
