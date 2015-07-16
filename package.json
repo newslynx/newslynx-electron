@@ -16,8 +16,7 @@
   "scripts": {
     "start": "NEWSLYNX_ENV=electron electron .",
     "start-https": "NEWSLYNX_ENV=electron-https electron .",
-    "build": "NEWSLYNX_ENV=electron electron-packager . NewsLynx --prune --overwrite --platform=darwin --arch=x64 --version=0.29.2 --icon='assets/merlynne-ears.icns' --ignore='node_modules/(electron-packager|electron-prebuilt)'",
-    "build-https": "NEWSLYNX_ENV=electron-https electron-packager . NewsLynx --prune --overwrite --platform=darwin --arch=x64 --version=0.29.2 --icon='assets/merlynne-ears.icns' --ignore='node_modules/(electron-packager|electron-prebuilt)'"
+    "build": "NEWSLYNX_ENV=electron electron-packager . NewsLynx --prune --overwrite --out=dist --platform=darwin --arch=x64 --version=0.29.2 --icon='assets/merlynne-ears.icns' --ignore='node_modules/(electron-packager|electron-prebuilt|LOCK|CURRENT)'"
   },
   "files": [
     "index.js",
@@ -33,13 +32,13 @@
     "electron-app"
   ],
   "dependencies": {
-    "electron-debug": "^0.1.0",
     "electron-gh-releases": "^1.0.1",
     "isotope-layout": "^2.2.1",
     "jquery": "^1.11.0",
     "moment": "^2.8.3",
     "newslynx": "^0.0.1"
   },
+  "license": "CC-BY-NC-SA-4.0",
   "devDependencies": {
     "electron-packager": "5.0.1",
     "electron-prebuilt": "^0.29.2"
