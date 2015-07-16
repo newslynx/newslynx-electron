@@ -5,20 +5,20 @@ A desktop version of [NewsLynx app](http://github.com/newslynx/newslynx-app) run
 
 ## Installation and config
 
-Install dependencies with the following:
+Install dependencies with:
 
 ```
-$ npm install
+npm install
 ```
 
-Rename [config.sample.yaml](config.sample.yaml) to `config.yaml` and change values to where your [NewsLynx API](http://github.com/newslynx/newslynx-core) lives and pick a new secret key string.
+Rename [newslynx-config-sample](newslynx-config-sample/) to `newslynx-config` and change values to where your [NewsLynx API](http://github.com/newslynx/newslynx-core) lives (leave blank if this should be configured when the app first launches) and pick a new secret key string. Move this folder into `node_modules/`.
 
 ### Development
 
 Use this command to start up a version locally.
 
 ```
-$ npm start
+npm start
 ```
 
 ### Build app
@@ -26,7 +26,7 @@ $ npm start
 Package into a desktop application with the following: 
 
 ```
-$ npm run build
+npm run build
 ```
 
 
