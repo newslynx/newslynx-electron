@@ -1,5 +1,23 @@
 'use strict';
 
+var yaml = require('js-yaml'),
+    _ = require('underscore'),
+    path = require('path'),
+    fs = require('fs');
+
+var newslynx_config_lib = require('newslynx-app-config'),
+    local_settings,
+    newslynx_config;
+
+
+if (_.isEmpty(newslynx_config_lib.config)){
+  local_settings = yaml.load(fs.readFileSync(path.join(__dirname, '/config.yaml'), 'utf-8'));
+  newslynx_config = _.extend({}, newslynx_config_lib.config, local_settings);
+
+  newslynx_config_lib.save(newslynx_config);
+}
+
+
 var newslynx = require('newslynx'),
     port = 3690;
 
