@@ -13,7 +13,7 @@ var newslynx_config_lib = require('newslynx-app-config'),
 if (_.isEmpty(newslynx_config_lib.config)){
   local_settings = yaml.load(fs.readFileSync(path.join(__dirname, '/config.yaml'), 'utf-8'));
   newslynx_config = _.extend({}, newslynx_config_lib.config, local_settings);
-
+  
   newslynx_config_lib.save(newslynx_config);
 }
 
