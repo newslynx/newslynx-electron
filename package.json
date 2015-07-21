@@ -1,7 +1,7 @@
 {
   "name": "newslynx-electron",
   "productName": "Newslynx",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A desktop version of the NewsLynx web app.",
   "main": "index.js",
   "repository": "newslynx/newslynx-electron",
