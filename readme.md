@@ -3,7 +3,7 @@
 A desktop version of [NewsLynx app](http://github.com/newslynx/newslynx-app) running on [Electron](https://github.com/atom/electron). Scaffolded with [generator-electron](https://github.com/sindresorhus/generator-electron). Still a work in progress. To be released July 2015.
 
 
-## Installation and config
+## Installation
 
 Install dependencies with:
 
@@ -11,7 +11,9 @@ Install dependencies with:
 npm install
 ```
 
-Rename [newslynx-config-sample](newslynx-config-sample/) to `newslynx-config` and change values to where your [NewsLynx API](http://github.com/newslynx/newslynx-core) lives (leave blank if this should be configured when the app first launches) and pick a new secret key string. Move this folder into `node_modules/`.
+## Configuration
+
+Rename `config.sample.yaml` to `config.yaml` and set your own values. You can leave `api_url` blank if you would like the user to be prompted for this value when the app first launches.
 
 ### Development
 
