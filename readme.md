@@ -2,6 +2,8 @@
 
 A desktop version of [NewsLynx app](http://github.com/newslynx/newslynx-app) running on [Electron](https://github.com/atom/electron). Scaffolded with [generator-electron](https://github.com/sindresorhus/generator-electron). Still a work in progress. To be released July 2015.
 
+![](assets/merlynne-in-the-dock.png)
+
 
 ## Installation
 
