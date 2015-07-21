@@ -20,7 +20,7 @@ Rename `config.sample.yaml` to `config.yaml` and set your own values. You can le
 
 ### Running
 
-Use this command to start up a version locally.
+Use this command to start up a version locally. 
 
 ```
 npm start
