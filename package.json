@@ -1,7 +1,7 @@
 {
   "name": "newslynx-electron",
   "productName": "Newslynx",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A desktop version of the NewsLynx web app.",
   "main": "index.js",
   "repository": "newslynx/newslynx-electron",
@@ -34,7 +34,7 @@
   "dependencies": {
     "electron-gh-releases": "^1.0.1",
     "js-yaml": "^3.3.1",
-    "newslynx": "^0.0.1",
+    "newslynx": "^1.0.0",
     "newslynx-app-config": "0.0.1",
     "underscore": "^1.8.3"
   },

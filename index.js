@@ -46,8 +46,6 @@ var options = {
   currentVersion: app.getVersion()
 }
 
-console.log(app.getVersion())
-
 var update = new gh_releases(options, function (auto_updater) {
   // Auto updater event listener
   auto_updater.on('update-downloaded', function (e, rNotes, rName, rDate, uUrl, quitAndUpdate) {
@@ -56,12 +54,8 @@ var update = new gh_releases(options, function (auto_updater) {
   })
 })
 
-console.log(update)
-
 // Check for updates
 update.check(function (err, status) {
-  console.log(err)
-  console.log(status)
   if (!err && status) {
       update.download()
   } else {
