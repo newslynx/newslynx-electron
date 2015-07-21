@@ -17,7 +17,6 @@ if (_.isEmpty(newslynx_config_lib.config)){
   newslynx_config_lib.save(newslynx_config);
 }
 
-
 var newslynx = require('newslynx'),
     port = 3690;
 
@@ -87,7 +86,7 @@ app.on('activate-with-no-open-windows', function () {
 });
 
 app.on('ready', function () {
-	newslynx.run(port, function(){
+	newslynx.run(port, null, function(){
   	mainWindow = createMainWindow();
   });
 });
