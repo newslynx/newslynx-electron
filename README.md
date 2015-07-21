@@ -1,6 +1,7 @@
-# Newslynx Electron
+Newslynx Electron
+===================
 
-A desktop version of [NewsLynx app](http://github.com/newslynx/newslynx-app) running on [Electron](https://github.com/atom/electron). 
+> A desktop version of [NewsLynx app](http://github.com/newslynx/newslynx-app) running on [Electron](https://github.com/atom/electron). 
 
 #### [Download the latest release](https://github.com/newslynx/newslynx-electron/releases)
 
