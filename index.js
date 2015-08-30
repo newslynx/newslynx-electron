@@ -85,6 +85,12 @@ app.on('activate-with-no-open-windows', function () {
 });
 
 app.on('ready', function () {
+  // Add menu items
+  var Menu = require('menu');
+  var menu_template = require('./menus.js')(BrowserWindow)
+  var menu = Menu.buildFromTemplate(menu_template);
+  Menu.setApplicationMenu(menu);
+
 	newslynx.run(port, null, function(){
   	mainWindow = createMainWindow();
   });
