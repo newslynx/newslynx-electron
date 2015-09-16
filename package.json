@@ -16,7 +16,7 @@
   "scripts": {
     "start": "electron .",
     "start-https": "NEWSLYNX_ENV=electron-https electron .",
-    "build": "electron-packager . NewsLynx --overwrite --out=newslynx-dist --platform=darwin --arch=x64 --version=0.29.2 --icon='assets/merlynne-ears.icns' --ignore=newslynx-dist --sign='Michael Keller (newslynx.org)'"
+    "build": "electron-packager . NewsLynx --overwrite --out=newslynx-dist --all --version=0.29.2 --icon='assets/merlynne-ears.icns' --ignore=newslynx-dist --sign='Michael Keller (newslynx.org)'"
   },
   "files": [
     "index.js",
