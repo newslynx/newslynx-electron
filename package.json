@@ -34,11 +34,11 @@
   "dependencies": {
     "electron-gh-releases": "^1.0.1",
     "js-yaml": "^3.3.1",
-    "newslynx": "^1.0.1",
+    "newslynx": "^1.0.3",
     "newslynx-app-config": "0.0.1",
     "underscore": "^1.8.3"
   },
-  "license": "CC-BY-NC-SA-4.0",
+  "license": "CC-BY-SA-4.0",
   "devDependencies": {
     "electron-packager": "5.0.1",
     "electron-prebuilt": "^0.30.0"
